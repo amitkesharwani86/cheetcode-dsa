@@ -1,0 +1,99 @@
+.featured-problems {
+  padding: 4rem 2rem;
+  margin-bottom: 2rem;
+}
+
+.problems-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.problem-link-card {
+  display: flex;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  gap: 1.5rem;
+  cursor: pointer;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.problem-link-card:hover {
+  transform: translateX(10px);
+  border-color: var(--accent-color);
+  box-shadow: 0 5px 15px var(--accent-glow);
+}
+
+.problem-id {
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: var(--text-secondary);
+  width: 40px;
+}
+
+.difficulty-badge.hard {
+  background: rgba(255, 59, 48, 0.2);
+  color: #FF3B30;
+}
+
+/* Search Bar Styles */
+.search-container {
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.search-input {
+  width: 100%;
+  max-width: 600px;
+  padding: 1rem 1.5rem;
+  border-radius: 30px;
+  border: 1px solid var(--card-border);
+  background: var(--card-bg);
+  color: var(--text-primary);
+  font-size: 1.1rem;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.search-input:focus {
+  border-color: var(--accent-color);
+  box-shadow: 0 0 15px rgba(0, 184, 163, 0.2);
+}
+
+.search-input::placeholder {
+  color: var(--text-secondary);
+}
+
+.no-results {
+  text-align: center;
+  color: var(--text-secondary);
+  font-size: 1.2rem;
+  padding: 3rem 0;
+  grid-column: 1 / -1;
+}
+
+.problem-name {
+  font-size: 1.25rem;
+  flex: 1;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .featured-problems {
+    padding: 2rem 1rem;
+  }
+  .problem-link-card {
+    padding: 1rem 1.5rem;
+    gap: 1rem;
+  }
+  .problem-id {
+    font-size: 1.25rem;
+    width: 30px;
+  }
+  .problem-name {
+    font-size: 1.1rem;
+  }
+}

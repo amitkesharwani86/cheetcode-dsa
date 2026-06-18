@@ -1,0 +1,63 @@
+.topic-page {
+  padding-top: 6rem;
+  padding-bottom: 4rem;
+  min-height: 80vh;
+}
+
+.topic-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.topic-title {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.topic-description {
+  color: var(--text-secondary);
+  font-size: 1.25rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.problem-list-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 4rem;
+  color: var(--text-secondary);
+}
+
+/* Re-using some styles from FeaturedProblems */
+.topic-problem-card {
+  display: flex;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  margin-bottom: 1rem;
+  gap: 1.5rem;
+  cursor: pointer;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.topic-problem-card:hover {
+  transform: translateX(10px);
+  border-color: var(--accent-color);
+  box-shadow: 0 5px 15px var(--accent-glow);
+}
+
+.topic-problem-card .problem-id {
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: var(--text-secondary);
+  width: 40px;
+}
+
+.topic-problem-card .problem-name {
+  font-size: 1.25rem;
+  flex: 1;
+  margin: 0;
+}

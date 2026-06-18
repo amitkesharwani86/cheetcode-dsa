@@ -1,0 +1,64 @@
+.problems-page {
+  padding-top: 6rem;
+  padding-bottom: 4rem;
+  min-height: 80vh;
+}
+
+.problems-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.problems-title {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.problems-subtitle {
+  color: var(--text-secondary);
+  font-size: 1.25rem;
+}
+
+.problems-list-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.problem-list-card {
+  display: flex;
+  align-items: center;
+  padding: 1.5rem 2rem;
+  margin-bottom: 1rem;
+  gap: 1.5rem;
+  cursor: pointer;
+  transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.problem-list-card:hover {
+  transform: translateX(10px);
+  border-color: var(--accent-color);
+  box-shadow: 0 5px 15px var(--accent-glow);
+}
+
+.problem-list-card .problem-id {
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: var(--text-secondary);
+  width: 40px;
+}
+
+.problem-list-card .problem-name {
+  font-size: 1.25rem;
+  flex: 1;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .problem-list-card {
+    padding: 1rem 1.5rem;
+    gap: 1rem;
+  }
+  .problems-title {
+    font-size: 2rem;
+  }
+}

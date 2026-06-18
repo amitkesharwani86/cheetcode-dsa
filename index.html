@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <script>
+      window.onerror = function(msg, url, line, col, error) {
+        document.body.innerHTML += '<div style="background:red;color:white;padding:20px;position:fixed;top:0;left:0;z-index:9999;width:100%;"><h1 style="font-size:24px;margin-bottom:10px;">FATAL ERROR:</h1><p style="font-size:16px;">' + msg + '</p><pre style="white-space:pre-wrap;font-size:14px;margin-top:10px;">' + (error ? error.stack : '') + '</pre></div>';
+        return false;
+      };
+      window.addEventListener('unhandledrejection', function(event) {
+        document.body.innerHTML += '<div style="background:red;color:white;padding:20px;position:fixed;top:0;left:0;z-index:9999;width:100%;"><h1 style="font-size:24px;margin-bottom:10px;">PROMISE REJECTION:</h1><p style="font-size:16px;">' + event.reason + '</p></div>';
+      });
+    </script>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CheetCode</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

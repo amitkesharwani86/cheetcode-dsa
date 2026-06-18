@@ -1,0 +1,96 @@
+.code-workspace {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.workspace-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.lang-dropdown {
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  font-family: inherit;
+  font-size: 0.9rem;
+  cursor: pointer;
+  outline: none;
+  transition: border-color 0.2s;
+}
+
+.lang-dropdown:focus {
+  border-color: var(--accent-color);
+}
+
+.run-btn {
+  background: rgba(0, 255, 136, 0.15);
+  color: #00ff88;
+  border: 1px solid rgba(0, 255, 136, 0.4);
+  padding: 0.4rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.2s;
+}
+
+.run-btn:hover:not(:disabled) {
+  background: rgba(0, 255, 136, 0.3);
+  box-shadow: 0 0 10px rgba(0, 255, 136, 0.2);
+}
+
+.run-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.editor-container {
+  flex: 1;
+  min-height: 400px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.console-container {
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  background: #1e1e1e;
+}
+
+.console-header {
+  padding: 0.5rem 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  font-weight: 600;
+}
+
+.console-body {
+  flex: 1;
+  padding: 1rem;
+  overflow-y: auto;
+}
+
+.output-text {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.9rem;
+  margin: 0;
+  white-space: pre-wrap;
+  color: var(--text-primary);
+}
+
+.output-text.error {
+  color: #ff3366;
+}
